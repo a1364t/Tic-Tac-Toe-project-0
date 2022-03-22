@@ -3,7 +3,8 @@
 let turn = true;
 let box = ['','','','','','','','',''];
 let outcome = undefined;
-
+let counterPlayer1 = 0;
+let counterPlayer2 = 0;
 
 
 
@@ -11,13 +12,12 @@ $('.cell').on('click', function () {
     if(turn && $(this).val() === '') {
         $(this).val('X')
         box[$(this).attr('id')] = 'X';
-        $('h4').text( 'Player 2 continues')                 
+        $('h4').text( 'Player 2 continues');                        
     }
     else if (!turn && $(this).val() === '') {
         $(this).val('O');
-        box[$(this).attr('id')] = 'O'        
-        
-        $('h4').text( 'Player 1 continues')
+        box[$(this).attr('id')] = 'O';   
+        $('h4').text( 'Player 1 continues');        
     }
     outcome = compareCells();
     winPlayer();
@@ -58,9 +58,13 @@ const winPlayer = function () {
     if(outcome) {
         if (turn == true) {
             alert('Player 1 wins');
+            counterPlayer1 += 1;
+            $('#Player1').text(`Player 1: ${counterPlayer1}`);
         }
         else if (turn == false) {
             alert('Player 2 wins');
+            counterPlayer2 += 1;
+            $('#Player2').text(`Player 2: ${counterPlayer2}`); 
         }
     }
     else if (outcome == false) {

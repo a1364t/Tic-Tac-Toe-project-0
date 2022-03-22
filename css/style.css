@@ -9,6 +9,12 @@ body {
      text-align: center;
  }
 
+ .winner {
+    display: block; 
+    text-align: center;   
+
+ }
+
 .main {
     width: 320px;
     margin: 0 auto 0;
