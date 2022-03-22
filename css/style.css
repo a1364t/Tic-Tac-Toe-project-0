@@ -5,7 +5,9 @@ body {
     max-width: 960px;
     background-color: rgb(255, 181, 181);
 }
-
+ h1 , h4{
+     text-align: center;
+ }
 
 .main {
     width: 320px;
@@ -14,6 +16,15 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;    
     
+}
+
+.button {
+    width: 200px;
+    height: 100px;
+}
+
+#name1, #name2 {
+    width: 200px;
 }
 
 .cell {

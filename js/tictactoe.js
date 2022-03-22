@@ -1,20 +1,29 @@
-console.log('hello');
+
 
 let turn = true;
 let box = ['','','','','','','','',''];
 
+const player2 = $('#name2').val();
+
+$('#name1').on('click', function () {
+    const player1 = $('#name1').val();
+    console.log(player1);
+});
+
+
 $('.cell').on('click', function () {
     if(turn && $(this).val() === '') {
         $(this).val('X')
-        box[$(this).attr('id')] = 'X';        
-        compareCells();
-        
+        box[$(this).attr('id')] = 'X';
+        $('h4').text( player2 + 'continues')                 
     }
     else if (!turn && $(this).val() === '') {
         $(this).val('O');
         box[$(this).attr('id')] = 'O'        
         compareCells;
+        $('h4').text(player1 + 'continues')
     }
+    compareCells();
     turn = !turn;    
 });
 
@@ -51,7 +60,8 @@ const compareCells = function () {
 $('button').on('click', function() {
     $('.cell').val('');
     box = ['','','','','','','','',''];
-    turn = true;    
+    turn = true;
+    $('h4').text('Player 1 starts');    
 });
 
 
