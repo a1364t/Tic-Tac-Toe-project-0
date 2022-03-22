@@ -1,0 +1,40 @@
+ * { border: 1px solid red}
+
+body {
+    margin: 0 auto;
+    max-width: 960px;
+    background-color: rgb(255, 181, 181);
+}
+
+
+.main {
+    width: 320px;
+    margin: 0 auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;    
+    
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    font-size: 50pt;
+    font-family: 'Bitter', serif;
+    font-family: 'Rock 3D', cursive;
+    border-radius: 50%;
+}
+
+.reset {
+    position: relative;
+    left: 46%;
+    top: 100px;
+    text-align: center;
+    box-shadow: 1em;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 50px;
+    border-radius: 0.5em;
+}
+
