@@ -1,0 +1,85 @@
+body {
+    margin: 0 auto;  
+    background-color: pink; 
+}
+ h1 , h4{
+     text-align: center;
+ }
+
+ h4 {
+     height: 20px;
+ }
+
+ .winner {
+    display: block; 
+    text-align: center; 
+ }
+
+.main {
+    width: 320px;
+    margin: 0 auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    background-color: white;    
+    
+}
+
+.button {
+    width: 200px;
+    height: 100px;    
+}
+
+#name1, #name2 {
+    width: 200px;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    font-size: 50pt;
+    font-family: 'Bitter', serif;
+    font-family: 'Rock 3D', cursive;
+    border-radius: 50%;
+}
+
+.cell:hover{
+    background-color: blue;
+    opacity: 30%;
+}
+
+.reset {
+    position: relative;      
+    
+    text-align: center;
+    box-shadow: 1em;    
+    font-weight: bold;
+    font-size: 30px;
+    border-radius: 0.5em;
+        
+}
+
+.modal {
+    visibility: hidden;     
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(255,0,0,0.4);
+        
+  }
+  .modal-content {
+    display: flex;
+    justify-content: space-between;    
+    background-color: blue;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid grey;
+    width: 50%;     
+    color: white;
+    font-size: 30px;
+    border-radius: 0.5em;
+  }
