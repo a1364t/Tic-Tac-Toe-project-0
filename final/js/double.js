@@ -10,6 +10,8 @@ let player2 = 'Player 2';
 let token1 = 'X';
 let token2 = 'O';
 
+
+
 $('#player1Name').on('click', function () {
     player1 = $('#nameEnter').val();
     $('#Player1').text(`${player1}:`);
@@ -36,17 +38,21 @@ $('.cell').on('click', function () {
     if(turn && $(this).val() === '') {
         $(this).val(`${token1}`)
         box[$(this).attr('id')] = 'X';
-        $('h4').text(`${player2} continues`);                        
+        $('h4').text(`${player2} continues`);
+                                       
     }
     else if (!turn && $(this).val() === '') {
         $(this).val(`${token2}`);
         box[$(this).attr('id')] = 'O';   
-        $('h4').text( `${player1} continues`);        
+        $('h4').text( `${player1} continues`);
+       
+              
     }
     outcome = compareCells();
     winPlayer();
     turn = !turn;    
 });
+
 
 const compareCells = function () {
     if ((box[0] !='' || box[1] !='' || box[2] !='') && box[0] === box[1]  && box[1] === box[2]) {
@@ -75,7 +81,7 @@ const compareCells = function () {
     }
     else if (!box.includes('')) {        
         return false;
-        }    
+    }    
 };
 
 const winPlayer = function () {
@@ -105,7 +111,8 @@ $('.reset').on('click', function() {
     box = ['','','','','','','','',''];
     turn = true;
     $('h4').text(`${player1} starts`);
-    outcome = undefined;    
+    outcome = undefined;
+    k = 0;    
 });
 
 const openPopup = function (player) {

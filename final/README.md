@@ -19,3 +19,5 @@ In future, the following features will be implemented.
 # Bugs/Issues
 * In the single-player version, the computer goes one step further when the player wins the game.
 
+[Click here](https://a1364t.github.io/Tic-Tac-Toe-project-0/) to play the game.
+
